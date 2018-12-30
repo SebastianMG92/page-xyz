@@ -1,0 +1,12 @@
+@include font-face(Montserrat, fonts/Montserrat/Montserrat-Medium);
+@include font-face(Roboto, fonts/Roboto/Roboto-Medium);
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0.5em 0;
+}
+p {
+  margin: 0;
+  padding: 0.3 0;
+}

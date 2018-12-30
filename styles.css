@@ -10,8 +10,7 @@ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
-}
+  /* 2 */ }
 
 /* Sections
    ========================================================================== */
@@ -20,16 +19,14 @@ html {
  */
 /* line 24, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 body {
-  margin: 0;
-}
+  margin: 0; }
 
 /**
  * Render the `main` element consistently in IE.
  */
 /* line 32, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 main {
-  display: block;
-}
+  display: block; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -38,8 +35,7 @@ main {
 /* line 41, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
-}
+  margin: 0.67em 0; }
 
 /* Grouping content
    ========================================================================== */
@@ -54,8 +50,7 @@ hr {
   height: 0;
   /* 1 */
   overflow: visible;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -66,8 +61,7 @@ pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */
-}
+  /* 2 */ }
 
 /* Text-level semantics
    ========================================================================== */
@@ -76,8 +70,7 @@ pre {
  */
 /* line 77, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 a {
-  background-color: transparent;
-}
+  background-color: transparent; }
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -90,8 +83,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   text-decoration: underline dotted;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
@@ -99,8 +91,7 @@ abbr[title] {
 /* line 96, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 b,
 strong {
-  font-weight: bolder;
-}
+  font-weight: bolder; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -113,16 +104,14 @@ samp {
   font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Add the correct font size in all browsers.
  */
 /* line 117, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -134,18 +123,15 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* line 134, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
 
 /* line 138, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
 
 /* Embedded content
    ========================================================================== */
@@ -154,8 +140,7 @@ sup {
  */
 /* line 149, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 img {
-  border-style: none;
-}
+  border-style: none; }
 
 /* Forms
    ========================================================================== */
@@ -176,8 +161,7 @@ textarea {
   line-height: 1.15;
   /* 1 */
   margin: 0;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Show the overflow in IE.
@@ -187,8 +171,7 @@ textarea {
 button,
 input {
   /* 1 */
-  overflow: visible;
-}
+  overflow: visible; }
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -198,8 +181,7 @@ input {
 button,
 select {
   /* 1 */
-  text-transform: none;
-}
+  text-transform: none; }
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
@@ -209,8 +191,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button;
-}
+  -webkit-appearance: button; }
 
 /**
  * Remove the inner border and padding in Firefox.
@@ -221,8 +202,7 @@ button::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0;
-}
+  padding: 0; }
 
 /**
  * Restore the focus styles unset by the previous rule.
@@ -232,16 +212,14 @@ button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+  outline: 1px dotted ButtonText; }
 
 /**
  * Correct the padding in Firefox.
  */
 /* line 230, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
+  padding: 0.35em 0.75em 0.625em; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -262,24 +240,21 @@ legend {
   padding: 0;
   /* 3 */
   white-space: normal;
-  /* 1 */
-}
+  /* 1 */ }
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 /* line 254, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 progress {
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 /* line 262, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 textarea {
-  overflow: auto;
-}
+  overflow: auto; }
 
 /**
  * 1. Add the correct box sizing in IE 10.
@@ -291,8 +266,7 @@ textarea {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
@@ -300,8 +274,7 @@ textarea {
 /* line 281, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
+  height: auto; }
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -312,16 +285,14 @@ textarea {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-  /* 2 */
-}
+  /* 2 */ }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
 /* line 300, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+  -webkit-appearance: none; }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -332,8 +303,7 @@ textarea {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
-  /* 2 */
-}
+  /* 2 */ }
 
 /* Interactive
    ========================================================================== */
@@ -342,16 +312,14 @@ textarea {
  */
 /* line 321, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 details {
-  display: block;
-}
+  display: block; }
 
 /*
  * Add the correct display in all browsers.
  */
 /* line 329, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 summary {
-  display: list-item;
-}
+  display: list-item; }
 
 /* Misc
    ========================================================================== */
@@ -360,20 +328,196 @@ summary {
  */
 /* line 340, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 template {
-  display: none;
-}
+  display: none; }
 
 /**
  * Add the correct display in IE 10.
  */
 /* line 348, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_reset.scss */
 [hidden] {
-  display: none;
-}
+  display: none; }
 
-/* line 5, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat/Montserrat-Medium.eot?") format("eot"), url("fonts/Montserrat/Montserrat-Medium.woff2") format("woff2"), url("fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("fonts/Montserrat/Montserrat-Medium.ttf") format("truetype"), url("fonts/Montserrat/Montserrat-Medium.svg#Montserrat") format("svg"); }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto/Roboto-Medium.eot?") format("eot"), url("fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("fonts/Roboto/Roboto-Medium.woff") format("woff"), url("fonts/Roboto/Roboto-Medium.ttf") format("truetype"), url("fonts/Roboto/Roboto-Medium.svg#Roboto") format("svg"); }
+
+/* line 4, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_fonts.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat";
+  margin: 0;
+  padding: 0.5em 0; }
+
+/* line 9, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/_fonts.scss */
+p {
+  margin: 0;
+  padding: 0.3 0; }
+
+/* line 9, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
 body {
-  padding: 1px;
-}
+  margin: 0;
+  background: orange;
+  font-family: "Roboto";
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center; }
+
+/* line 17, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+figure, img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  display: block; }
+
+/* line 24, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.container {
+  display: grid;
+  grid-template-columns: minmax(auto, 1200px);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+/* line 31, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+
+/* line 35, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+header {
+  background: white;
+  position: fixed;
+  top: 0px;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+  -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.34); }
+
+/* line 44, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+header .container {
+  background: white; }
+
+/* line 47, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.is-sticky {
+  top: -70px; }
+
+/* line 50, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.logo {
+  grid-column: 1 / span 8;
+  justify-self: start;
+  padding: 0 1em; }
+
+/* line 55, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.logo img {
+  width: 60px; }
+
+/* line 58, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+#menu {
+  grid-column: 9 / span 4;
+  justify-self: end;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding: 0.5em; }
+
+/* line 65, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon {
+  width: 24px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer; }
+
+/* line 75, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #000000;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out; }
+
+/* line 88, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon span:nth-child(1) {
+  top: 0px; }
+
+/* line 91, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon:hover span:nth-child(1) {
+  top: -3px; }
+
+/* line 95, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon span:nth-child(2), .nav-icon span:nth-child(3) {
+  top: 6px; }
+
+/* line 99, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon span:nth-child(4) {
+  top: 12px; }
+
+/* line 102, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon:hover span:nth-child(4) {
+  top: 15px; }
+
+/* line 106, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+/* line 112, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+/* line 117, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+/* line 122, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-icon.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%; }
+
+/* line 130, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-menu {
+  position: absolute;
+  left: 0;
+  background: #111111;
+  width: 100%;
+  top: 60px;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  z-index: -1; }
+
+/* line 143, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-menu li {
+  display: block;
+  margin: 0;
+  text-align: center; }
+
+/* line 149, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-menu .link-word {
+  display: block;
+  padding: 0.5em 0.5em;
+  color: white;
+  text-decoration: none; }
+
+/* line 155, C:/Users/Sebas/Documents/Portafolio-sebastian/scss/styles.scss */
+.nav-menu-display {
+  top: -180px;
+  opacity: 1; }
 
 /*# sourceMappingURL=../styles.map */
