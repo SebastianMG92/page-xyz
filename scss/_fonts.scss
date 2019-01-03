@@ -1,4 +1,4 @@
-@include font-face(Montserrat, fonts/Montserrat/Montserrat-Medium);
+@include font-face(Montserrat, fonts/Montserrat/Montserrat-ExtraBold);
 @include font-face(Roboto, fonts/Roboto/Roboto-Medium);
 
 h1,h2,h3,h4,h5,h6 {
@@ -8,5 +8,5 @@ h1,h2,h3,h4,h5,h6 {
 }
 p {
   margin: 0;
-  padding: 0.3 0;
+  padding: 0.3em 0;
 }

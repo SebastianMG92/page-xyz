@@ -12,11 +12,18 @@ navIcon.addEventListener("click", function () {
 
 window.addEventListener('scroll', function () {
 	keyScrollCurrent = window.pageYOffset
-	if (keyScrollPrev < keyScrollCurrent || keyScrollPrev == 0) {
-		stickyBar.classList.add("is-sticky")
+	if (keyScrollPrev < keyScrollCurrent) {
+		stickyBar.classList.remove("is-sticky");
+		navIcon.classList.remove("open");
+		navMenu.classList.add("nav-menu-display");
+		stickyBar.classList.add("hidde");
+	}
+	else if (keyScrollCurrent == 0) {
+		stickyBar.classList.remove("is-sticky");
 	}
 	else {
-		stickyBar.classList.remove("is-sticky")
+		stickyBar.classList.add("is-sticky");
+		stickyBar.classList.remove("hidde");
 	}
 
 	keyScrollPrev = keyScrollCurrent

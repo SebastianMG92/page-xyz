@@ -21,39 +21,52 @@ figure, img {
   margin: 0;
   display: block;
 }
+a {
+  color: grey;
+  text-decoration: none;
+  font-size: inherit;
+}
+.black a {
+    color: white;
+}
 .container {
   display: grid;
-  grid-template-columns: minmax(auto, 1200px);
+  grid-template-columns: minmax(auto, 380px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
 }
 .row {
   display: grid;
   grid-template-columns: repeat(12,1fr);
 }
 header {
-  background: white;
   position: fixed;
-  top:0px;
+  top:1.5em;
   -webkit-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
-  -webkit-box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.34);
-          box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.34);
-}
-header .container {
- background: white;
+  width: 100%;
 }
 .is-sticky {
-  top:-70px;
+  top:0px;
+}
+.hidde {
+  top:-50px;
 }
 .logo {
   grid-column: 1 / span 8;
-  justify-self: start;
   padding: 0 1em;
+  text-align: left;
+  font-size: 0.7em;
+  color:white;
 }
-.logo img {
-  width: 60px;
+.logo span {
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+.logo span:hover {
+  color:grey;
 }
 #menu {
   grid-column: 9 / span 4;
@@ -66,8 +79,6 @@ header .container {
   width: 24px;
   height: 20px;
   position: relative;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
@@ -77,7 +88,7 @@ header .container {
   position: absolute;
   height: 2px;
   width: 100%;
-  background: #000000;
+  background: white;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -125,37 +136,129 @@ header .container {
   left: 50%;
 }
 
-
-
 .nav-menu {
   position: absolute;
   left: 0;
-  background: $gris;
   width: 100%;
-  top: 60px;
+  top: 100%;
   margin: 0;
   padding: 0;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  z-index: -1;
+  font-size: 0.7em;
 }
 
 .nav-menu li {
-  display: block;
-  margin: 0;
-  text-align: center;
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease-in-out;
+  top: 0;
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+.nav-menu-display li {
+  top: -15px;
+  opacity: 0;
+  z-index: -1;
 }
 
 .nav-menu .link-word {
-  display: block;
   padding: 0.5em 0.5em;
   color: white;
   text-decoration: none;
+  transition: 0.5s ease-out;
 }
-.nav-menu-display {
-  top: -180px;
+.nav-menu .link-word:hover {
+  text-decoration: underline;
+  transform: translateX(-5px);
+}
+.nav-menu .link-word:hover::after {
   opacity: 1;
 }
 
+.nav-menu .link-word::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: -6px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 7px solid #ffffff;
+  border-left: 0px solid;
+  opacity: 0;
+}
 
 
+
+// Portada
+
+.hero {
+  background: black;
+  color: white;
+}
+.text-heading {
+  grid-area: 1 / span 12;
+  align-self: center;
+  padding: 4em 0.5em 0;
+}
+.form-heading {
+  grid-area: 2 / span 12;
+}
+.hero h1 {
+  font-size: 2.1em;
+  text-align: left;
+  font-weight: bold;
+}
+.hero p {
+  font-size: 0.86em;
+  text-align: left;
+  font-weight: 100;
+}
+
+// // Waves
+
+
+
+// .ocean { 
+//   height: 5%;
+//   width:100%;
+//   position:absolute;
+//   bottom:0;
+//   left:0;
+//   background: #015871;
+// }
+
+// .wave {
+//   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+//   position: absolute;
+//   top: -198px;
+//   width: 6400px;
+//   height: 198px;
+//   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+//   transform: translate3d(0, 0, 0);
+// }
+
+// .wave:nth-of-type(2) {
+//   top: -175px;
+//   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+//   opacity: 1;
+// }
+
+// @keyframes wave {
+//   0% {
+//     margin-left: 0;
+//   }
+//   100% {
+//     margin-left: -1600px;
+//   }
+// }
+
+// @keyframes swell {
+//   0%, 100% {
+//     transform: translate3d(0,-25px,0);
+//   }
+//   50% {
+//     transform: translate3d(0,5px,0);
+//   }
+// }
