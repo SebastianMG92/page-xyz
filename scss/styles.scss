@@ -13,6 +13,7 @@ body {
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
+  box-sizing: border-box;
 }
 figure, img {
   width: 100%;
@@ -31,7 +32,15 @@ a {
 }
 .container {
   display: grid;
-  grid-template-columns: minmax(auto, 380px);
+  grid-template-columns: minmax(auto, 350px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+.container-fluid {
+  display: grid;
+  grid-template-columns: minmax(auto, 100%);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -47,6 +56,7 @@ header {
   -webkit-transition: ease-in-out .5s;
   transition: ease-in-out .5s;
   width: 100%;
+  z-index: 1;
 }
 .is-sticky {
   top:0px;
@@ -196,69 +206,193 @@ header {
 .hero {
   background: black;
   color: white;
+  height: 100vh;
+  position: relative;
 }
-.text-heading {
+.hero .row {
+  grid-auto-rows: 60% 6% 34%;
+}
+.hero .text-heading {
   grid-area: 1 / span 12;
   align-self: center;
   padding: 4em 0.5em 0;
 }
-.form-heading {
-  grid-area: 2 / span 12;
-}
-.hero h1 {
+.hero .text-heading h1 {
   font-size: 2.1em;
   text-align: left;
   font-weight: bold;
 }
-.hero p {
+.hero .text-heading p {
   font-size: 0.86em;
   text-align: left;
   font-weight: 100;
 }
+.hero-animation {
+  grid-area: 2 / span 12;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+.hero-animation .curveDownColor {
+  animation: heroAnimation 5s infinite linear alternate;
+  transform: translate3d(-300px,-20px,0);
+  position: absolute;
+  z-index: 3;
+  top: -5px;
+}
+.hero-animation .curveDownColor:nth-of-type(2) {
+  z-index: 2;
+  animation-delay: 3s;
+  transform:translate3d(-70px, -10px, 0)
+}
+.hero-animation .curveDownColor:nth-of-type(3) {
+  z-index: 1;
+  transform:translate3d(-70px, -10px, 0);
+  animation-direction: alternate-reverse;
+  top: 5px;
+}
+.hero-animation .curveDownColor path {
+  fill: black;
+}
+.hero-animation .curveDownColor:nth-child(2) path {
+  fill: #212121;
+}
+.hero-animation .curveDownColor:nth-child(3) path {
+  fill: #3a3a3a;
+}
 
-// // Waves
+@keyframes heroAnimation {
+  20% {
+    transform: translate3d(-270px,-10px,0);
+  }
+  50% {
+    transform: translate3d(-400px, 0px, 0);
+  }
+  100% {
+    transform: translate3d(-480px,-10px,0);
+  }
+}
+
+
+.form-heading {
+  grid-area: 3 / span 12;
+  padding: 0em 0.5em;
+  background: white;
+  color: black;
+}
+
+.hero .form-heading form {
+  width: 90%;
+  margin: auto;
+}
+.hero input, .hero select {
+  width: 100%;
+  display: block;
+  outline:none;
+  border:none;
+  position: relative;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  box-sizing: border-box;
+  font-size: 14px;
+  top: 5px;
+  height: 30px;
+}
+.hero .form-heading .placeholder {
+  position: relative;
+  vertical-align: middle;
+  font-size: 0.7em;
+}
+.form-heading .border-form {
+  position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    width: 100%;
+}
+
+.form-heading .border-form::before, .form-heading .border-form::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border: 3px solid black;
+  border-right: none;
+  top: 0;
+  left: 0;
+  transition: 0.5s ease;
+}
+.form-heading .border-form::after {
+  left: 50%;
+  border: 3px solid black;
+  border-left: none;
+}
+ .input input.filled + label .placeholder, .hero input:focus + label .placeholder {
+  animation: placeholderMove 0.3s ease forwards;
+}
+.hero input:focus + .border-form::before {
+  transform: translateX(-10%);
+}
+.hero input:focus + .border-form::after {
+  transform: translateX(10%);
+}
+
+@keyframes placeholderMove {
+  from {
+    font-size: 0px;
+    top: 0;
+  }
+  to {
+    font-size: initial;
+    top:-30px;
+  }
+}
+
+.form-heading .input {
+  width: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  position: relative;
+  margin: 1.5em 0;
+}
+.form-heading .button-form {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  padding: 0.5em 2em;
+  letter-spacing: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.form-heading .button-form::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: #212121;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: .5s ease;
+}
+.form-heading .button-form:hover::before {
+  width: 100%;
+}
+.form-heading .button-form::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 3px;
+  left: 3px;
+  border: 2px solid black;
+}
+.form-heading .button-form span {
+  position: relative;
+  z-index: 2;
+}
 
 
 
-// .ocean { 
-//   height: 5%;
-//   width:100%;
-//   position:absolute;
-//   bottom:0;
-//   left:0;
-//   background: #015871;
-// }
-
-// .wave {
-//   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
-//   position: absolute;
-//   top: -198px;
-//   width: 6400px;
-//   height: 198px;
-//   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-//   transform: translate3d(0, 0, 0);
-// }
-
-// .wave:nth-of-type(2) {
-//   top: -175px;
-//   animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-//   opacity: 1;
-// }
-
-// @keyframes wave {
-//   0% {
-//     margin-left: 0;
-//   }
-//   100% {
-//     margin-left: -1600px;
-//   }
-// }
-
-// @keyframes swell {
-//   0%, 100% {
-//     transform: translate3d(0,-25px,0);
-//   }
-//   50% {
-//     transform: translate3d(0,5px,0);
-//   }
-// }
