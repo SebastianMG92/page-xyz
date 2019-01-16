@@ -1,12 +1,55 @@
 @include font-face(Montserrat, fonts/Montserrat/Montserrat-ExtraBold);
 @include font-face(Roboto, fonts/Roboto/Roboto-Medium);
+@include font-face(icomoon, fonts/Icons/icomoon);
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-behance:before {
+  content: "\eaa8";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
 
 h1,h2,h3,h4,h5,h6 {
   font-family: "Montserrat";
   margin: 0;
   padding: 0.5em 0;
 }
+h1 {
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: bold;
+  padding:0;
+}
+h2,h3,h4 {
+  font-size: 1em;
+  text-align: left;
+  font-weight: bold;
+  position: relative;
+}
 p {
-  margin: 0;
-  padding: 0.3em 0;
+  font-size: 0.7em;
+  text-align: left;
+  font-weight: 100;
 }

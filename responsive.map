@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "scss/responsive.css",
+	"sources": [
+		"scss/responsive.scss"
+	],
+	"sourcesContent": [
+		"@media screen and (min-width: 400px){\r\n  body {\r\n    background: red;\r\n  }\r\n}"
+	],
+	"mappings": "AAAA,MAAM,CAAN,MAAM,MAAM,SAAS,EAAE,KAAK;;EAC1B,AAAA,IAAI,CAAC;IACH,UAAU,EAAE,GAAI,GACjB",
+	"names": []
+}

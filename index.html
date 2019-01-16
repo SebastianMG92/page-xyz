@@ -7,7 +7,6 @@
   <title>Sebastian Marin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
-
 </head>
 
 <body>
@@ -40,32 +39,22 @@
     <div class="container-fluid">
       <div class="row">
         <div class="text-heading">
-          <h1>Desarrollador web front-end</h1>
+          <h1>Desarrollador web freelance</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ea praesentium quod, nostrum culpa
-            molestiae voluptatum esse at saepe repudiandae? Animi doloribus culpa, quod commodi nisi molestiae sed
-            delectus? Maxime?
+            Hola soy Sebastian. Trabajo construyendo ideas para posicionar marcas en internet.
           </p>
         </div>
         <div class="hero-animation">
-          <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="700" height="70" viewBox="0 0 100 100"
-            preserveAspectRatio="none">
-            <path d="M0 0 C 50 100 80 100 100 0 Z" />
-          </svg>
-          <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="700" height="70" viewBox="0 0 100 100"
-            preserveAspectRatio="none">
-            <path d="M0 0 C 50 100 80 100 100 0 Z" />
-          </svg>
-          <svg class="curveDownColor" xmlns="http://www.w3.org/2000/svg" version="1.1" width="700" height="70" viewBox="0 0 100 100"
-            preserveAspectRatio="none">
-            <path d="M0 0 C 50 100 80 100 100 0 Z" />
-          </svg>
+          <div class="wave"></div>
+          <div class="wave"></div>
+          <div class="wave"></div>
         </div>
 
         <div class="form-heading">
           <form action="">
+          <p>Escribeme y recibe el 0% de descuento</p>
             <span class="input">
-              <input type="text" name="name" id="name" required />
+              <input type="text" name="name" id="name" minlength="3" autocomplete="off" required />
               <label for="name" class="border-form"> <span class="placeholder">Cual es tu nombre?</span>
               </label>
             </span>
@@ -78,9 +67,9 @@
               </select>
               <label for="who" class="border-form"><span class="placeholder">Estas interesado en?</span></label>
             </span>
-            
+
             <span class="input">
-              <input type="email" name="mail" id="">
+              <input type="email" name="mail" id="" required>
               <label for="mail" class="border-form"><span class="placeholder">Cual es tu correo electronico?</span></label>
             </span>
             <button type="submit" class="button-form"><span>Enviar</span></button>
@@ -90,28 +79,56 @@
     </div>
 
   </section>
-  <section class="about">
+  <section class="about black">
+    
     <div class="container">
-      <div>
-        <h2>Sobre mi</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam asperiores tenetur hic nemo! Corporis
-          deserunt maiores, ab ullam rem ea saepe perspiciatis dicta. Suscipit doloribus, minima possimus tempora
-          eligendi voluptatem!</p>
+        <div class="row"> 
+      <div class="picture">
+        <h2 class="effect-word">Sobre mi</h2>
+        <figure><img src="img/programador-web.jpg" alt=""></figure>
+        <div class="social-icon">
+          <a href="#"><i class="icon-whatsapp"></i>
+</a>           <a href="#"><i class="icon-behance"></i>
+ </a>          <a href="#"><i class="icon-github"></i>
+  </a>         <a href="#"><i class="icon-linkedin2"></i></a> 
+        </div>
       </div>
-      <div>
-        <article>
-          <div class="img-service">
-            <figure>
-              <img src="" alt="diseño web">
-            </figure>
+      <div class="resumen">
+          <p>Tengo aproximadamente dos años de experiencia en el campo de marketing digital trabajando más
+              directamente con el diseño de páginas web y landing page con fines comerciales. En años pasados he
+              trabajado en diferentes campos que difieren a la publicidad, sin embargo, han aportado conocimiento a mi labor
+              actual.</p>
+              <p>
+              Soy estudiante de publicidad y mercadeo de la Universidad Los Libertadores, actualmente estoy por superar el
+              5° semestre de su totalidad. He realizado estudios adicionales en temas relacionados con el marketing digital y
+              el diseño web, también soy Google Partner certificado en red de búsqueda.</p>
+        </div>
+        <div class="skills">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam asperiores tenetur hic nemo! Corporis
+              deserunt maiores, ab ullam rem ea saepe perspiciatis dicta. Suscipit doloribus, minima possimus tempora
+              eligendi voluptatem!</p>
           </div>
-          <div class="text-service">
-            <h2>Diseño web</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel quia sed ratione! Quas, optio eveniet
-              saepe sunt minima, tempore magni hic voluptatibus dolores amet nostrum fuga, consectetur aliquid laborum
-              placeat?</p>
-          </div>
-        </article>
+    </div>
+  </div>
+  </section>
+  <section class="resumen">
+    <div class="container">
+      <div class="row">
+          <div class="web-design">
+              <article>
+                <div class="img-service">
+                  <figure>
+                    <img src="" alt="diseño web">
+                  </figure>
+                </div>
+                <div class="text-service">
+                  <h2>Diseño web</h2>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel quia sed ratione! Quas, optio eveniet
+                    saepe sunt minima, tempore magni hic voluptatibus dolores amet nostrum fuga, consectetur aliquid laborum
+                    placeat?</p>
+                </div>
+              </article>
+            </div>
       </div>
     </div>
   </section>
@@ -159,7 +176,7 @@
   </section>
   <footer class="footer">
     <div class="container">
-      <form action="">
+      <!-- <form action="">
         <h2>Estoy interesado en:</h2>´
         <select name="service" id="service">
           <option value>Seleccione un servicio</option>
@@ -170,7 +187,7 @@
         <input type="text" name="phone" id="phone" placeholder="Teléfono / Skype" />
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Describa su requerimiento"></textarea>
         <button type="submit">Solicitar informacion <i>ICO</i></button>
-      </form>
+      </form> -->
       <div class="menu">
         <ul>
           <li><a href="#quien-soy">Quien soy</a></li>
