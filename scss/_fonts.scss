@@ -3,6 +3,7 @@
 @include font-face(icomoon, fonts/Icons/icomoon);
 
 
+
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -18,6 +19,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-home:before {
+  content: "\e900";
+}
+.icon-image:before {
+  content: "\e90d";
+}
+.icon-film:before {
+  content: "\e913";
+}
+.icon-file-picture:before {
+  content: "\e927";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-laptop:before {
+  content: "\e957";
+}
+.icon-mobile:before {
+  content: "\e958";
+}
+.icon-mobile2:before {
+  content: "\e959";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-page-break:before {
+  content: "\ea68";
+}
+.icon-terminal:before {
+  content: "\ea81";
+}
 .icon-whatsapp:before {
   content: "\ea93";
 }
@@ -27,8 +70,23 @@
 .icon-github:before {
   content: "\eab0";
 }
+.icon-wordpress:before {
+  content: "\eab4";
+}
 .icon-linkedin2:before {
   content: "\eaca";
+}
+.icon-libreoffice:before {
+  content: "\eae3";
+}
+.icon-html-five2:before {
+  content: "\eae5";
+}
+.icon-css3:before {
+  content: "\eae6";
+}
+.icon-git:before {
+  content: "\eae7";
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -42,11 +100,18 @@ h1 {
   font-weight: bold;
   padding:0;
 }
-h2,h3,h4 {
+h2,h3 {
   font-size: 1em;
   text-align: left;
   font-weight: bold;
   position: relative;
+}
+h4 {
+  font-size: 0.8em;
+  text-align: left;
+  font-weight: bold;
+  position: relative;
+  color:grey;
 }
 p {
   font-size: 0.7em;

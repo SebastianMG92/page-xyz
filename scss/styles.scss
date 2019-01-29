@@ -4,13 +4,13 @@
 
 
 // Colores
-$black-base: #191919;
-$gris: rgb(17, 17, 17);
+$black-base: rgb(27, 27, 27);
+$black-grey: rgb(41, 41, 41);
 
 
 body {
   margin:0;
-  background: orange;
+  background: white;
   font-family: "Roboto";
   font-size: 20px;
   line-height: 1.5;
@@ -32,9 +32,30 @@ a {
 .black {
     color: white;
 }
+.bg-black {
+  background: $black-base;
+}
+.bg-white {
+  background: white;
+}
+.bg-black-grey {
+  background: $black-base;
+}
+.p-5 {
+  padding: 5em 0;
+}
+.bash-effect::before {
+  content: "";
+  width: .25em;
+  height: .8em;
+  background: white;
+  display: inline-block;
+  margin-right: .25em;
+  bottom: 0;
+}
 .container {
   display: grid;
-  grid-template-columns: minmax(auto, 85%);
+  grid-template-columns: minmax(auto, 1280px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -51,15 +72,29 @@ a {
 .row {
   display: grid;
   grid-template-columns: repeat(12,1fr);
+  padding: 0 1em;
+}
+.container-fluid .row {
+  padding: 0;
+}
+.sep-wave {
+  background: white;
+  margin-top: -100px;
+}
+.sep-wave-reverse {
+  background: white;
+  transform: rotate(180deg);
+}
+.sep-wave path, .sep-wave-reverse path  {
+  fill: #1B1B1B !important;
 }
 .effect-word::after {
   content: "";
   position: absolute;
-  top: calc(50% - 1px);
-  left: 100%;
-  border-bottom: 1px solid white;
-  width: 0%;
-  transition: .5s ease-in-out;
+  top: 100%;
+  left: 0;
+  border-bottom: 1px solid grey;
+  width: 120%;
 }
 header {
   position: fixed;
@@ -85,15 +120,36 @@ header {
   text-align: left;
   font-size: 0.7em;
   color:white;
+  padding: 0 1em;
 }
-.logo span {
+.logo .about-link {
   cursor: pointer;
   transition: 0.5s ease-out;
   display: block;
+  z-index: 11;
 }
-.logo span:hover {
+.logo .about-link:hover {
   color:grey;
 }
+.logo .about-link span {
+  transition: 0.5s ease-out;
+}
+.logo .about-link.about-link-open span:nth-child(1),.logo .about-link span:nth-child(2)  {
+  transform: translateX(0);
+  position: relative;
+  opacity: 1;
+}
+.logo .about-link span:nth-child(1) {
+  transform: translateX(-50px);
+  position: absolute;
+  opacity: 0;
+}
+.logo .about-link.about-link-open span:nth-child(2) {
+  transform: translateX(50px);
+  opacity: 0;
+  position: absolute
+}
+
 #menu {
   grid-column: 9 / span 4;
   justify-self: end;
@@ -172,10 +228,12 @@ header {
   font-size: 0.7em;
   background: rgba(33, 33, 33, 0.95);
   transition: 0.5s ease-in-out;
+  visibility: visible;
 }
 
 .nav-menu-display {
   background: transparent;
+  visibility: hidden;
 }
 .nav-menu li {
   display: flex;
@@ -217,7 +275,7 @@ header {
   left: 100%;
   border-bottom: 1px solid white;
   width: 0%;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 
@@ -250,7 +308,7 @@ header {
 
 
 .hero-animation .wave {
-  background: url(../img/wave.svg) repeat-x;
+  background: url(img/wave.svg) repeat-x;
   position: absolute;
   top: -30px;
   width: 400%;
@@ -405,33 +463,196 @@ header {
 
 .about {
   background: $black-base;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  overflow-y: scroll;
+  height: 100%;
+  transition: 1s ease;
+  pointer-events: initial;
+  visibility: visible;
+}
+.about .modal-content {
+  transform: translateY(-100%);
+  transition: 1s ease;
+}
+
+.about .modal-content-close {
+  transform: translateY(0%);
+  margin-top: 3em;
+  padding: 0 1em;
+}
+.about-close {
+  top: 100%;
+  pointer-events: none;
+  visibility: hidden;
+}
+.about .row {
+  grid-gap: 20px 0px;
+  grid-auto-rows: .1fr 1fr 1fr 1fr;
+  align-self: center;
+}
+
+.about .nav-icon {
+  display: block;
+}
+
+.about .tit-about {
+  grid-area: 1/span 12;
+  justify-self: start;
 }
 .about .picture {
-  grid-area: 1/span 12;
+  grid-area: 2/span 12;
   display: grid;
-  grid-template-rows: 100px 280px 100px;
+  grid-template-rows: 1fr .2fr;
   align-items: center;
 }
-.about .resumen {
-  grid-area: 2 / span 12
+
+.tit-about h2 {
+  align-self: start;
 }
-.about .skills {
+.picture figure {
+  max-width: 350px;
+  justify-self: center;
+  align-self: center;
+}
+.about .resumen {
   grid-area: 3 / span 12
 }
-.effect-word::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  border-bottom: 1px solid grey;
-  width: 50%;
-  transition: 0.5s ease-in-out;
+.about .skills {
+  grid-area: 4/span 12;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.skills h3 {
+  grid-area: 1 / span 2;
+}
+.skills p {
+  grid-area: 2 / span 2;
+}
+.skills .list-skills {
+  justify-self: start;
+}
+.skills .list-skills ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+  margin: 0.5em 0;
+  font-size: 0.7em;
+}
+
+.social-icon {
+  position: relative;
 }
 .social-icon a {
   color:white;
   cursor:pointer;
   padding: 0.25em;
 }
+.social-icon::before, .social-icon::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  right: unset;
+  border-bottom: 1px solid grey;
+  width: 20%;
+}
+.social-icon::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: unset;
+  right: 0;
+  border-bottom: 1px solid grey;
+  width: 20%;
+}
+
+// Resumen
+
+.resumen {
+  background: $black-base;
+}
+
+.resumen .row {
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.resumen .resumen-services {
+  grid-area: 1 / span 12;
+}
+.resumen-buttons {
+  grid-area: 2 / span 12;
+}
+.resumen .resumen-services h2,.resumen .resumen-services p {
+  text-align: center;
+}
+.resumen .service-box {
+  background: #fbfbfb;
+  padding: 1em;
+  border: 1px solid #eaeaea;
+  transition: 1s ease;
+}
+.resumen .service-box::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background: black;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  transition: 1s ease;
+}
+.resumen .service-box:hover {
+  box-shadow: 0px 0px 10px 3px #dadada;
+  transform: translateY(-10px);
+}
+.resumen .service-box:hover::after {
+  left: 0%;
+  right: 0%;
+}
+.resumen .icon-service {
+  max-width: 180px;
+  height: auto;
+  margin: auto;
+}
+.text-service h2, .text-service p {
+  text-align: center;
+}
+.resumen .web-design {
+  grid-area: 1 / span 12;
+}
+.resumen .in-mktg {
+  grid-area: 2 / span 12;
+}
+
+.resumen .out-mktg {
+  grid-area: 3 / span 12;
+}
+.btn {
+  padding: 0.8em;
+  cursor: pointer;
+  font-size: 0.7em;
+  margin: 1em;
+  display: inline-block;
+  width: 120px;
+}
+.btn-white {
+  background: transparent;
+  color: white;
+  border: 2px solid #ffffff;
+}
+.btn i[class^=icon-], .btn i[class*=" icon-"] {
+  opacity: 0;
+  margin-left: -15px;
+  transition: 0.5s ease;
+}
+.btn:hover i[class^=icon-], .btn:hover i[class*=" icon-"] {
+  opacity: 1;
+  margin-left: 5px;
+}
+
 
 
 
