@@ -1,8 +1,40 @@
 @media screen and (min-width:480px){
-  .hero .form-heading form {
+
+.hero .form-heading form {
     width: 420px;
 }
+.footer .menu {
+  grid-area: 1/span 6;
+  li {
+    display: inline-block;
+  }
 }
+.footer .copyright {
+  grid-area: 2/span 12;
+}
+.footer .social {
+  grid-area: 1/span 6;
+}
+
+@for $i from 1 through 5 {  
+  @if ($i <= 2) {
+  .portfolio .portfolio-box:nth-child(#{$i}) {
+    grid-area: 1/span 1;
+  }}
+  @else if ($i <= 4){
+  .portfolio .portfolio-box:nth-child(#{$i}) {
+    grid-area: 2/span 1;
+  }}
+  @else {
+    .portfolio .portfolio-box:nth-child(#{$i}) {
+      grid-area: 3/span 1;
+  }}
+}}
+  
+
+
+
+
 
 @media screen and (min-width:768px){
 .nav-icon {
@@ -107,7 +139,60 @@
 .resumen .out-mktg {
   grid-area: 2/span 6;
 }
+@for $i from 0 through 5 {  
+  .portfolio .portfolio-box:nth-child(#{$i}) {
+    grid-area: #{$i}/span 2;
+    }
+}
 
+.portfolio .portfolio-box article {
+  grid-template-rows: 30% 70%;
+  color: initial;
+  position: relative;
+  &:hover {
+    box-shadow: 0 0 20px 5px #484848;
+    z-index: 10;
+  }
+}
+.portfolio-box .img-portfolio {
+  grid-area: 1 / span 1 / span 2 / span 1;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-box .title-portfolio {
+  grid-area: 1 /span 1;
+  position: relative;
+  background: white;
+  z-index: 1;
+}
+.portfolio .button-portfolio {
+  display:none;
+}
+.portfolio-box .text-portfolio {
+  grid-area: 2 / 2 / span 1 / span 1;
+  max-height: 100%;
+}
+.portfolio-box .title-portfolio {
+  color: black;
+}.portfolio-box .text-portfolio {
+  visibility: visible;
+}
+.portfolio .portfolio-element {
+  grid-row-gap: 0px;
+}
+.portfolio .portfolio-box:nth-child(even) .img-portfolio{
+  grid-area: 1/2/span 2/span 1;
+}
+.portfolio .portfolio-box:nth-child(even) .title-portfolio{
+  grid-area: 1/span 1;
+}
+.portfolio .portfolio-box:nth-child(even) .text-portfolio{
+  grid-area: 2/1/2/span 1;
+}
+.title-portfolio h3 {
+  min-height: unset;
+}
 }
 
 
@@ -155,4 +240,5 @@
 .resumen .out-mktg {
   grid-area: 1/span 4;
 }
+
 }
